@@ -6,71 +6,85 @@
 }
 
 .container {
-    padding: 1em;
-    display: grid;
-    grid-template-areas: 
-    "border-radius-top-left border-radius-top-left-value . border-radius-top-right-value border-radius-top-right"
-    ". . square . ."
-    "border-radius-botton-left border-radius-botton-left-value . border-radius-botton-right-value border-radius-botton-right"
-    ". . css . .";
-    grid-template-columns: 1fr 0.1fr 1fr 0.1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    display: flex;
     height: 100vh;
+    align-items: center;
+}
+
+.properties{
+    width: 300px;
+    background-color: #5AA48E;
+    padding: 20px;
+    height: 100vh;
+    align-items: left;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.square-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .square {
-    grid-area: square;
     width: 15em;
     height: 15em;
     border: 5px solid #000;
-    margin: 0 auto;
+    margin-bottom: 2em;
     transition: 0.5s;
+    position: relative;
+}
 
+.unity-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.unity-group {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #D8DFA5;
+    width: 3em;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+}
+
+input[type="radio"]:checked + label {
+    font-weight: bold;
 }
 
 input[type="range"] {
     width: 90%;
 }
 
-#border-radius-botton-left {
-    grid-area: border-radius-botton-left;
-}
-
-#border-radius-botton-right {
-    grid-area: border-radius-botton-right;
-}
-
-#border-radius-top-left {
-    grid-area: border-radius-top-left;
-}
-
-#border-radius-top-right {
-    grid-area: border-radius-top-right;
-}
-
 #border-radius-top-left-value {
-    grid-area: border-radius-top-left-value;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    left: -2em;
+    top: -2em;
 }
 #border-radius-top-right-value {
-    grid-area: border-radius-top-right-value;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    right: -2em;
+    top: -2em;
 }
 #border-radius-botton-right-value {
-    grid-area: border-radius-botton-right-value;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    right: -2em;
+    bottom: -2em;
 }
 #border-radius-botton-left-value {
-    grid-area: border-radius-botton-left-value;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    left: -2em;
+    bottom: -2em;
 }
 
 .output {
