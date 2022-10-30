@@ -10,21 +10,32 @@
   <body>
     <div class="container" id="container">
       <div class="properties">
+        <div class="forma-container">
+          <div class="forma-group active" id="forma-square">
+            <div class="forma square"></div>
+          </div>
+          <div class="forma-group" id="forma-rectangleh">
+            <div class="forma rectangleh"></div>
+          </div>
+          <div class="forma-group" id="forma-rectanglev">
+            <div class="forma rectanglev"></div>
+          </div>
+        </div>
         <div class="unity-container">
           <div class="unity-group">
-            <input type="radio" id="px" name="unity" value="px" checked/><label
+            <input type="radio" id="px" name="unity" value="px" onchange="mundarBorderRadius()" checked /><label
               for="px"
               >px</label
             >
           </div>
           <div class="unity-group">
-            <input type="radio" id="em" name="unity" value="em" /><label
+            <input type="radio" id="em" name="unity" value="em" onchange="mundarBorderRadius()" /><label
               for="em"
               >em</label
             >
           </div>
           <div class="unity-group">
-            <input type="radio" id="per" name="unity" value="%" /><label
+            <input type="radio" id="per" name="unity" value="%" onchange="mundarBorderRadius()" /><label
               for="per"
               >%</label
             >
@@ -35,7 +46,7 @@
           <input
             type="range"
             min="0"
-            max="50"
+            max="500"
             value="0"
             step="1"
             id="border-radius-top-left"
@@ -47,7 +58,7 @@
           <input
             type="range"
             min="0"
-            max="50"
+            max="500"
             value="0"
             step="1"
             id="border-radius-top-right"
@@ -60,7 +71,7 @@
           <input
             type="range"
             min="0"
-            max="50"
+            max="500"
             value="0"
             step="1"
             id="border-radius-botton-right"
@@ -72,7 +83,7 @@
           <input
             type="range"
             min="0"
-            max="50"
+            max="500"
             value="0"
             step="1"
             id="border-radius-botton-left"
@@ -81,7 +92,7 @@
         </div>
       </div>
       <div class="square-group">
-        <div class="square" id="square">
+        <div class="square" id="drawing">
           <span id="border-radius-top-left-value">0</span>
           <span id="border-radius-top-right-value">0</span>
           <span id="border-radius-botton-right-value">0</span>
