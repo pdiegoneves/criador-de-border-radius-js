@@ -22,7 +22,7 @@
     flex-direction: column;
 }
 
-.square-group{
+.square-group {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,12 +31,13 @@
     height: 100%;
 }
 
+
+
 .square {
     width: 15em;
     height: 15em;
     border: 5px solid #000;
     margin-bottom: 2em;
-    transition: 0.5s;
     position: relative;
 }
 .rectangleh {
@@ -44,7 +45,6 @@
     height: 5em;
     border: 5px solid #000;
     margin-bottom: 2em;
-    transition: 0.5s;
     position: relative;
 }
 .rectanglev {
@@ -52,7 +52,6 @@
     height: 20em;
     border: 5px solid #000;
     margin-bottom: 2em;
-    transition: 0.5s;
     position: relative;
 }
 
@@ -172,3 +171,8 @@ span {
     height: 40px;
 }
 
+#drawing {
+    resize: both;
+    overflow: hidden;
+    transition: 0.2s linear;
+}
